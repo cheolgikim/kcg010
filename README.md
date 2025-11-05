@@ -7,8 +7,8 @@ source .venv1/bin/activate
 python3.11 -m venv .venv2
 source .venv2/bin/activate
 
-pip install -r requirements.txt
-
+(가상환경 .venv1 에서 실행 ) pip install -r requirements_RAG.txt
+(가상환경 .venv2 에서 실행 ) pip install -r requirements_R_Retriver.txt
 
 
 # 2. MYSQL서비스 시작
@@ -72,3 +72,4 @@ pip install --upgrade gradio gradio_client fastapi uvicorn
 9. LangGraph 활용: 검색 결과 유무에 따라 답변/폴백으로 분기하는 로직을 StateGraph로 명확하게 관리
 
 10. OCR은 GooGleOCR이 성능이 가장 좋다고 판단해서 구글 ocr을 사용했다.
+

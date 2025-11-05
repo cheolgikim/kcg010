@@ -1,0 +1,44 @@
+# --- 1. LangChain & LangGraph (RAG Core) ---
+# LangChain/LangGraph의 비동기 및 스트리밍 기능을 위한 핵심 패키지
+# v0.2.x (LCEL) 및 Pydantic v2 기반으로 안정화된 최신 버전을 권장합니다.
+langchain~=0.2.1
+langchain-core~=0.2.3
+langgraph~=0.1.0
+
+# --- 2. LLM & Embedding Models ---
+# OpenAI (gpt-4o-mini) 및 HuggingFace (bge-m3, Reranker) 모델 연동
+langchain-openai~=0.1.8
+langchain-huggingface~=0.0.3
+sentence-transformers~=3.0.0
+
+# --- 3. VectorDB & Retrievers (Hybrid Search) ---
+# ChromaDB (Vector)와 Elasticsearch (BM25/Keyword) 연동
+langchain-chroma~=0.1.1
+chromadb~=0.5.0
+langchain-community~=0.2.1
+langchain-elasticsearch~=0.2.1
+# Elasticsearch 8.x 버전 클라이언트
+elasticsearch>=8.0.0,<9.0.0
+
+# --- 4. ML/Data Libraries ---
+# sentence-transformers 및 bge-m3의 CPU/GPU 의존성
+# ⚠️ 현재는 CPU 버전을 설치합니다. GPU 사용 시 별도 설치가 필요합니다. (하단 설명 참조)
+torch~=2.3.0
+numpy~=1.26.0
+
+# --- 5. Application & Utilities ---
+# Gradio (Web UI) 및 .env (환경 변수) 로드
+gradio~=4.31.0
+python-dotenv~=1.0.1
+
+# --- 6. Core Dependencies (Implicit) ---
+# LangChain/Gradio 등이 의존하지만, 명시적으로 버전을 관리합니다.
+# Pydantic v2는 LangChain v0.2.x 이상 버전에 필수입니다.
+pydantic>=2.0.0
+
+# --- 7. ASGI Production Server ---
+# 대규모 운영을 위한 Gunicorn (워커 매니저)
+gunicorn~=22.0.0
+# Gunicorn이 사용할 비동기 워커 (FastAPI/Gradio 실행)
+uvicorn~=0.30.0
+

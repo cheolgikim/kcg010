@@ -1,0 +1,41 @@
+# --- 1. LangChain Core & Text Splitters ---
+# LangChain v0.2+ (Pydantic v2 기반)
+langchain-core~=0.2.3
+langchain-text-splitters~=0.2.0
+
+# --- 2. VectorDB & Retrievers (Hybrid Search) ---
+langchain-chroma~=0.1.1
+chromadb~=0.5.0
+langchain-elasticsearch~=0.2.1
+# ❗️ R_Retriever.py에서 ES_URL="http://localhost:9200"을 사용하므로
+#    Elasticsearch 8.x 버전에 맞는 클라이언트를 사용합니다.
+elasticsearch>=8.0.0,<9.0.0
+
+# --- 3. ML: Embeddings (HuggingFace) ---
+langchain-huggingface~=0.0.3
+sentence-transformers~=3.0.0
+# ⚠️ [CPU/GPU] 현재는 CPU 버전입니다. (하단 설명 참조)
+torch~=2.3.0
+
+# --- 4. ML: OCR (PaddleOCR) ---
+# pdf2image는 poppler 시스템 의존성이 필요합니다. (하단 설명 참조)
+pdf2image~=1.17.0
+# ❗️ PaddleOCR은 paddlepaddle이 필요합니다.
+paddleocr~=2.7.3
+# ⚠️ [CPU/GPU] 현재는 CPU 버전입니다. (하단 설명 참조)
+paddlepaddle~=2.6.1
+
+# --- 5. Data & Async Libraries ---
+# Playwright (웹 PDF 다운로드)
+playwright~=1.44.0
+# MySQL 비동기 제어
+aiomysql~=0.2.0
+PyMySQL~=1.1.0
+# OCR 이미지 처리를 위한 numpy
+numpy~=1.26.0
+
+# --- 6. Utilities ---
+# .env 파일 로드
+python-dotenv~=1.0.1
+tiktoken
+

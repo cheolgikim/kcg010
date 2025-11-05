@@ -71,5 +71,5 @@ pip install --upgrade gradio gradio_client fastapi uvicorn
 
 9. LangGraph 활용: 검색 결과 유무에 따라 답변/폴백으로 분기하는 로직을 StateGraph로 명확하게 관리
 
-10. OCR은 GooGleOCR이 성능이 가장 좋다고 판단해서 구글 ocr을 사용했다.
+10. OCR은 GooGleOCR을 사용함. 
 

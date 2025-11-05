@@ -15,6 +15,7 @@ wheels/
 
 # Virtual environments
 .venv
-
 .env
 Fine-tunning/.env
+
+.git_status.txt

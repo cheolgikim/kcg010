@@ -1,0 +1,4 @@
+sudo apt-get install poppler-utils
+sudo apt-get install tesseract-ocr-kor
+sudo playwright install-deps
+playwright install

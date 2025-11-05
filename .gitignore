@@ -1,0 +1,20 @@
+# Fine-tuning and cache directories
+Fine-tunning/
+chroma_db_persistent/
+chroma_data/
+pdf_cache/
+RAG.log
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+.env
+Fine-tunning/.env
